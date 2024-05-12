@@ -28,21 +28,26 @@ commands:
 4 --> division
 """)
 
-# prompts user to choose a command.
-user_choice = int(input("> "))
-
 # elif tree to determine which operation was selected by the user.
 if user_choice == 1:
-    addition(x = int(input("> ")), y = int(input("> ")))
-
+    x = int(input(">"))
+    y = int(input(">"))
+    addition(x, y)
 elif user_choice == 2:
-    subtraction(x = int(input("> ")), y = int(input("> ")))
+    x = int(input(">"))
+    y = int(input(">"))
+    subtraction(x, y)
 
 elif user_choice == 3:
-    multiplication(x = int(input("> ")), y = int(input("> ")))
+    x = int(input(">"))
+    y = int(input(">"))
+    multiplication(x, y)
 
 elif user_choice == 4:
-    division(x = int(input("> ")), y = int(input("> ")))
+    x = int(input(">"))
+    y = int(input(">"))
+    division(x, y)
+
 # if an unknown command was entered, program will respond with "Error"
 else:
     print('Error')

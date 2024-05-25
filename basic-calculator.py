@@ -1,13 +1,17 @@
 # Basic Calculator
 # v1.4
+version = "v1.4" # displays the current version on title screen.
 
+# ABOUT PROGRAM:
 # A simple program that allows a user to select an arithmetic operation to perform on two numbers.
-# This is a simple project to help me refresh my basic knowledge on Python code. This project was
-# suggested to me by ChatGPT, and I got some help however all the code was written by me.
+# This is a simple project to help me refresh my basic knowledge on Python code, and to have a "first" project
+# to work on. This project was suggested to me by ChatGPT (however I was already going to do this), and I got some help
+# however all the code was written by me! ヽ (◕◡◕) ﾉ
 
 # imports
 import math
-# functions for arithmetic operations.
+
+# functions for arithmetic operations
 def addition(num1, num2):
     result = num1 + num2
     print("Result: " + str(num1) + " + " + str(num2) + " = " + str(result))
@@ -28,7 +32,7 @@ def squareroot(num):
     print("Result: √" + str(num) + " = " + str(result))
 
 # prints the title screen (commands for selecting which operation to use)
-print("""
+print(f"""
 B A S I C  C A L C U L A T O R
 - - - - - - - - - - - - - - - -
 commands:
@@ -38,7 +42,7 @@ commands:
 3 --> multiplication
 4 --> division
 5 --> square
-6 --> square root
+6 --> square root         {version}
 - - - - - - - - - - - - - - - -
 """)
 

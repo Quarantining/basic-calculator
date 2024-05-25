@@ -1,10 +1,12 @@
 # Basic Calculator
-# v1.3
+# v1.4
 
 # A simple program that allows a user to select an arithmetic operation to perform on two numbers.
 # This is a simple project to help me refresh my basic knowledge on Python code. This project was
 # suggested to me by ChatGPT, and I got some help however all the code was written by me.
 
+# imports
+import math
 # functions for arithmetic operations.
 def addition(num1, num2):
     result = num1 + num2
@@ -18,17 +20,25 @@ def multiplication(num1, num2):
 def division(num1, num2):
     result = num1 / num2
     print("Result: " + str(num1) + " / " + str(num2) + " = " + str(result))
+def square(num):
+    result = num * num
+    print("Result: " + str(num) + " ^2 " + " = " + str(result))
+def squareroot(num):
+    result = math.sqrt(num)
+    print("Result: √" + str(num) + " = " + str(result))
 
 # prints the title screen (commands for selecting which operation to use)
 print("""
 B A S I C  C A L C U L A T O R
 - - - - - - - - - - - - - - - -
 commands:
+0 --> stop
 1 --> addition
 2 --> subtraction
 3 --> multiplication
 4 --> division
-5 --> stop
+5 --> square
+6 --> square root
 - - - - - - - - - - - - - - - -
 """)
 
@@ -65,10 +75,17 @@ while running:
             num2 = int(input("Second Number >  "))
             division(num1, num2)
 
-        elif user_choice == 5: # ends program
+        elif user_choice == 5: # squaring
+            num = int(input("Enter Number >  "))
+            square(num)
+
+        elif user_choice == 6: # square root
+            num = int(input("Enter aNumber > "))
+            squareroot(num)
+
+        elif user_choice == 0: # ends program
             print("Calculator stopped.")
             break
-
         else: # if an unknown command was entered, program will respond with "Error"
             print('Not a valid input, try again.')
 
